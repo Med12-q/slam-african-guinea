@@ -5,145 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>✦𝐒𝐋𝐀𝐌 𝐀𝐅𝐑𝐈𝐂𝐀𝐍 𝐆𝐔𝐈𝐍𝐄𝐀 🇲🇱✦</title>
 <style>
-body{
-  margin:0;
-  font-family:'Segoe UI', sans-serif;
-  background:#010120; /* bleu foncé */
-  color:#ffffff;
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
-}
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px;
-  background:#010130;
-  color:#ffffff;
-  text-shadow:0 0 10px #00bfff;
-}
-.menu{ cursor:pointer; font-size:24px; }
-#adminPanel{
-  display:none;
-  padding:20px;
-  background:#011;
-  margin:20px auto;
-  border-radius:10px;
-  width:95%;
-  max-width:600px;
-  box-shadow:0 0 25px #00bfff;
-  text-align:center;
-}
-.gallery{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  flex-grow:1;
-  padding:10px;
-}
-.card{
-  background:#011;
-  margin:15px;
-  padding:15px;
-  border-radius:10px;
-  width:95%;
-  max-width:600px;
-  box-shadow:0 0 20px #00bfff;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover{
-  transform: scale(1.02);
-  box-shadow:0 0 30px #00ffff;
-}
-video,img{ width:100%; border-radius:12px; }
-.comment-box{
-  margin-top:10px;
-  display:flex;
-  flex-direction:column;
-}
-.comment-box input{ width:95%; padding:5px; margin-bottom:5px; }
-.like-button{
-  background:#0077cc;
-  color:white;
-  border:none;
-  padding:6px 10px;
-  border-radius:5px;
-  cursor:pointer;
-  width:80px;
-  margin-top:5px;
-}
-#loginBox{
-  display:none;
-  position:fixed;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  background:#111;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 0 25px #00bfff;
-}
-footer{
-  background:#111;
-  padding:25px;
-  text-align:center;
-  border-top:3px solid #00bfff;
-  margin-top:auto;
-}
-.desc-box{
-  display:inline-block;
-  border:2px solid #00bfff;
-  border-radius:12px;
-  padding:15px;
-  overflow:hidden;
-  height:140px;
-  width:90%;
-  margin:10px auto 20px auto;
-}
-.desc-text{
-  position:relative;
-  animation: scrollY 20s linear infinite;
-  font-weight:bold;
-  font-size:15px;
-}
-@keyframes scrollY{
-  0%{top:100%}
-  100%{top:-100%}
-}
-.color1{color:#00bfff;}
-.color2{color:#fff;}
-.color3{color:#00ffff;}
-.color4{color:#ffcc00;}
-.color5{color:#ff66cc;}
-.decor-gallery{
-  height:500px;
-  overflow:hidden;
-  margin:30px auto;
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-.decor-gallery img{
-  width:95%;
-  margin:10px 0;
-  border-radius:12px;
-  box-shadow:0 0 25px #00bfff;
-  animation: scrollDecor 50s linear infinite;
-}
-@keyframes scrollDecor{
-  0%{transform:translateY(100%);}
-  100%{transform:translateY(-100%);}
-}
-.dev-icons img{
-  width:28px;
-  border-radius:50%;
-  margin:5px;
-}
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#010120;color:#fff;display:flex;flex-direction:column;min-height:100vh;}
+header{display:flex;justify-content:space-between;align-items:center;padding:15px;background:#010130;text-shadow:0 0 10px #00bfff;}
+.menu{cursor:pointer;font-size:24px;}
+#adminPanel{display:none;padding:20px;background:#011;margin:20px auto;border-radius:10px;width:95%;max-width:600px;box-shadow:0 0 25px #00bfff;text-align:center;}
+.gallery{display:flex;flex-wrap:wrap;justify-content:center;flex-grow:1;padding:10px;}
+.card{background:#011;margin:15px;padding:15px;border-radius:10px;width:95%;max-width:600px;box-shadow:0 0 20px #00bfff;transition: transform 0.3s, box-shadow 0.3s;}
+.card:hover{transform:scale(1.02);box-shadow:0 0 30px #00ffff;}
+video,img{width:100%;border-radius:12px;}
+.comment-box{margin-top:10px;display:flex;flex-direction:column;}
+.comment-box input{width:95%;padding:5px;margin-bottom:5px;}
+.like-button{background:#0077cc;color:white;border:none;padding:6px 10px;border-radius:5px;cursor:pointer;width:80px;margin-top:5px;}
+#loginBox{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#111;padding:20px;border-radius:10px;box-shadow:0 0 25px #00bfff;}
+footer{background:#111;padding:25px;text-align:center;border-top:3px solid #00bfff;margin-top:auto;}
+.desc-box{display:inline-block;border:2px solid #00bfff;border-radius:12px;padding:15px;overflow:hidden;height:140px;width:90%;margin:10px auto 20px auto;}
+.desc-text{position:relative;animation:scrollY 20s linear infinite;font-weight:bold;font-size:15px;}
+@keyframes scrollY{0%{top:100%}100%{top:-100%}}
+.color1{color:#00bfff;}.color2{color:#fff;}.color3{color:#00ffff;}.color4{color:#ffcc00;}.color5{color:#ff66cc;}
+.decor-gallery{height:500px;overflow:hidden;margin:30px auto;width:100%;display:flex;flex-direction:column;align-items:center;}
+.decor-gallery img{width:95%;margin:10px 0;border-radius:12px;box-shadow:0 0 25px #00bfff;animation:scrollDecor 50s linear infinite;}
+@keyframes scrollDecor{0%{transform:translateY(100%);}100%{transform:translateY(-100%);}}
+.dev-icons img{width:28px;border-radius:50%;margin:5px;}
 .hidden-contact{display:none;}
+.audio-btn{position:fixed;bottom:20px;right:20px;z-index:1000;background:#00bfff;color:white;border:none;padding:10px 15px;border-radius:50px;cursor:pointer;box-shadow:0 0 15px #00bfff;}
 </style>
-
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
@@ -162,7 +47,7 @@ footer{
 <a href="https://wa.me/+224612572082" style="color:#00bfff;">WhatsApp Admin</a>
 </div>
 
-<h2 style="text-align:center;">📥 𝐏𝐮𝐛𝐥𝐢𝐜𝐚𝐭𝐢𝐨𝐧𝐬</h2>
+<h2 style="text-align:center;">🔥 Publications</h2>
 <div class="gallery" id="gallery"></div>
 
 <!-- ADMIN PANEL -->
@@ -170,6 +55,13 @@ footer{
 <h3>👑 Admin Upload</h3>
 <input type="file" id="file"><br><br>
 <button onclick="upload()">Uploader</button>
+
+<hr style="margin:20px 0; border-color:#00bfff;">
+<h4>🔒 Changer le code Admin</h4>
+<input type="password" id="newCode" placeholder="Nouveau mot de passe">
+<button onclick="changePassword()">Mettre à jour</button>
+<p id="codeMsg" style="font-size:12px; color:#00ff00;"></p>
+
 <p style="font-size:12px; color:#ccc;">Droits réservés à l’admin.</p>
 </div>
 
@@ -182,14 +74,7 @@ footer{
 
 <!-- AUDIO -->
 <audio id="bgMusic" src="song.mp3" loop></audio>
-
-<!-- BOUTON PLAY/PAUSE VIRTUEL (TOUCH SCREEN) -->
-<div style="position:fixed; bottom:20px; right:20px; z-index:1000;">
-<button onclick="toggleMusic()" 
-        style="background:#00bfff; color:white; border:none; padding:10px 15px; border-radius:50px; cursor:pointer; box-shadow:0 0 15px #00bfff;">
-▶️ / ⏸
-</button>
-</div>
+<button class="audio-btn" onclick="toggleMusic()">▶️ / ⏸</button>
 
 <footer>
 <div class="desc-box">
@@ -203,6 +88,7 @@ footer{
 </div>
 
 <div class="decor-gallery">
+<!-- 10 images -->
 <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80">
 <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=400&q=80">
 <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80">
@@ -233,20 +119,48 @@ const firebaseConfig = { apiKey:"XXX", authDomain:"XXX", projectId:"XXX", storag
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const storage = firebase.storage();
+
+// ADMIN CODE PERSISTANT
 let isAdmin=false;
+const codeDoc = db.collection("admin").doc("code");
+let adminCode="Negro224"; // valeur par défaut
+
+// Charger le code admin depuis Firebase
+codeDoc.get().then(doc=>{
+  if(doc.exists){adminCode = doc.data().code;}
+});
 
 // TOUCH SCREEN POUR AUTOPLAY MUSIQUE
 document.body.addEventListener('click', ()=>{document.getElementById('bgMusic').play();}, {once:true});
 
+function toggleMusic(){
+  const music = document.getElementById('bgMusic');
+  if(music.paused){music.play();} else {music.pause();}
+}
+
 function toggleContact(){document.getElementById("adminContact").classList.toggle("hidden-contact");}
 function openLogin(){document.getElementById("loginBox").style.display="block";}
 function login(){
-  if(document.getElementById("code").value==="Negro224"){
+  if(document.getElementById("code").value===adminCode){
     isAdmin=true;
     document.getElementById("adminPanel").style.display="block";
     document.getElementById("loginBox").style.display="none";
-  }else{alert("Code incorrect");}
+  }else{
+    alert("Code erroné");
+  }
 }
+
+// Changer le code admin et sauvegarder sur Firebase
+function changePassword(){
+  const newCode = document.getElementById("newCode").value;
+  if(newCode.length<4){alert("Le mot de passe doit contenir au moins 4 caractères"); return;}
+  adminCode=newCode;
+  codeDoc.set({code:newCode});
+  document.getElementById("newCode").value="";
+  document.getElementById("codeMsg").innerText="Mot de passe mis à jour ✅";
+}
+
+// UPLOAD FILES
 function upload(){
   if(!isAdmin) return;
   let file=document.getElementById("file").files[0];
@@ -256,22 +170,14 @@ function upload(){
     loadData();
   }));
 }
-function addLike(id,current){
-  db.collection("posts").doc(id).update({likes:current+1});
-}
-function addComment(id){
-  const input=document.getElementById("cmt_"+id);
-  db.collection("posts").doc(id).collection("comments").add({text:input.value});
-  input.value="";
-}
+
+// LIKES & COMMENTS
+function addLike(id,current){db.collection("posts").doc(id).update({likes:current+1});}
+function addComment(id){const input=document.getElementById("cmt_"+id);db.collection("posts").doc(id).collection("comments").add({text:input.value});input.value="";}
 function loadComments(postId, container){
-  db.collection("posts").doc(postId).collection("comments")
-  .orderBy("text")
-  .onSnapshot(snapshot=>{
+  db.collection("posts").doc(postId).collection("comments").orderBy("text").onSnapshot(snapshot=>{
     let html="";
-    snapshot.forEach(doc=>{
-      html+="<p>"+doc.data().text+"</p>";
-    });
+    snapshot.forEach(doc=>{html+="<p>"+doc.data().text+"</p>";});
     if(container) container.innerHTML=html;
   });
 }
@@ -298,5 +204,6 @@ function loadData(){
 }
 loadData();
 </script>
+
 </body>
   </html>
